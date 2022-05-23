@@ -12,4 +12,18 @@ public class AppTest {
         int[] expectedResult = {1,2,3,4,5,9};
         Assertions.assertArrayEquals(expectedResult,App.bubbleSort(testData));
     }
+    @Test
+    @DisplayName("Test empty array")
+    void emptyTest(){
+        int[] testData = {};
+        int[] expectedResult = {};
+        Assertions.assertArrayEquals(expectedResult,App.bubbleSort(testData));
+    }
+    @Test
+    @DisplayName("Test single element array")
+    void oneElementTest(){
+        int[] testData = {1};
+        int[] expectedResult = {1};
+        Assertions.assertArrayEquals(expectedResult,App.bubbleSort(testData));
+    }
 }
